@@ -20,7 +20,7 @@ printf("%lu, ", sum);
 fib1 = fib2;
 fib2 = sum;
 	}
-fibl_half1 = fib1 / 10000000000;
+fib1_half1 = fib1 / 10000000000;
 fib2_half1 = fib2 / 10000000000;
 fib1_half2 = fib1 % 10000000000;
 fib2_half2 = fib2 % 10000000000;
