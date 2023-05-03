@@ -27,7 +27,7 @@ num = 0;
 
 	while (i < length && m == 0)
 	{
-		if (s[i] == '_')
+		if (s[i] == '-')
 			++j;
 		if (s[i] >= '0' && s[i] <= '9')
 		{
