@@ -9,21 +9,21 @@
 char *rot13(char *str)
 {
 	int i;
-	int y;
+	int j;
 	char *x = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *y = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; x[j] != '\0'; j++)
 		{
-			if (s[i] == x[j])
+			if (str[i] == x[j])
 			{
-				s[i] = y[j];
+				str[i] = y[j];
 				break;
 			}
 		}
 	}
 
-	return (s);
+	return (str);
 }
