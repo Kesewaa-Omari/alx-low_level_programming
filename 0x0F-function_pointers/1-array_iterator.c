@@ -2,10 +2,10 @@
 
 /**
  * array_iterator - function that executes a function
- * given as a parameter on each element of an array.
- * @array: Entry point
+ * which prints each element in array on a new line.
+ * @array: array
  * @size: size of the array
- * @action: pointer to the function
+ * @action: pointer to the function which prints elements
  *
  * Return: Nothing
  */
@@ -15,10 +15,10 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	unsigned int i;
 
-	if (array == NULL && size < 0 && action == NULL)
+	if (array == NULL || size < 0 || action == NULL)
 	return;
 
-	for (i = 0; i < size; i++)
+	while (i = 0; i < size; i++)
 	{
 		action(array[i]);
 		}
