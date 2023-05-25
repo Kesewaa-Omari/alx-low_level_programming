@@ -34,13 +34,14 @@ void print_all(const char * const format, ...)
 		str = va_arg(pa, char *);
 		if (!str)
 		{
-			printf("(nil)");
+		str = "(nil)";
+		printf("(nil)");
 			break; }
 			printf("%s%s", separator, str);
 			break;
-		/*default:*/
-		/*i++;*/
-		/*continue;*/
+		default:
+		i++;
+		continue;
 		} separator = ", ";
 		i++;
 		}
