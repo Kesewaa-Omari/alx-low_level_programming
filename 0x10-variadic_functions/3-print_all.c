@@ -8,12 +8,12 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list pa;
+	va_list ap;
 	int i = 0;
 	char *separator = "";
 	char *str;
 
-	va_start(pa, format);
+	va_start(ap, format);
 
 	if (format)
 	{
@@ -22,29 +22,25 @@ void print_all(const char * const format, ...)
 	switch (format[i])
 	{
 	case 'c':
-		printf("%s%c", separator, va_arg(pa, int));
+		printf("%s%c", separator, va_arg(ap, int));
 		break;
 	case 'i':
-		printf("%s%d", separator, va_arg(pa, int));
+		printf("%s%d", separator, va_arg(ap, int));
 		break;
 	case 'f':
-		printf("%s%f", separator, va_arg(pa, double));
+		printf("%s%f", separator, va_arg(ap, double));
 		break;
 	case 's':
-		str = va_arg(pa, char *);
+		str = va_arg(ap, char *);
 		if (!str)
-		{
 		str = "(nil)";
-		printf("(nil)");
-			break; }
-			printf("%s%s", separator, str);
-			break;
+		printf("%s%s", separator, str);
+		break;
 		default:
 		i++;
 		continue;
 		} separator = ", ";
 		i++;
 		}
-		} printf("\n"), va_end(pa);
+		} printf("\n"), va_end(ap);
 		}
-
