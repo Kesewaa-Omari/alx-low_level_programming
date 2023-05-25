@@ -38,9 +38,9 @@ void print_all(const char * const format, ...)
 			break; }
 			printf("%s%s", separator, str);
 			break;
-		default:
-		i++;
-		continue;
+		/*default:*/
+		/*i++;*/
+		/*continue;*/
 		} separator = ", ";
 		i++;
 		}
