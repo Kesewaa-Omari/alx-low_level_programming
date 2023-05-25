@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 {
 	va_list pa;
 	int i = 0;
-	char *str, *separator = "";
+	char *str, *separator;
 
 	va_start(pa, format);
 
@@ -45,8 +45,6 @@ void print_all(const char * const format, ...)
 	i++;
 	}
 	}
-
 	printf("\n");
 	va_end(pa);
 	}
-
